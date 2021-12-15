@@ -21,9 +21,9 @@ public class ReplaceAllQuestionMark {
     /**
      * Steps :
      *  - left to right iteration
-     *  - keeping track of the previous and next element
-     *  - if ? found check previous and next
-     *  - check the first and last element explicitly
+     *  - need to check the fist char and the last char explicitly
+     *  - if ? found other than the first and second then
+     *  - check previous 1 and previous 2 char and the next char
      * */
 
     public static void main(String[] args){
@@ -58,13 +58,20 @@ public class ReplaceAllQuestionMark {
                     c[i] = alternativeChar(c[i-1]);
                     continue;
                 }
-                //get the previous element
+                //get the previous char
                 char tmp = c[i-1];
+
+                /**
+                 * check the previous char with
+                 *  - the next char
+                 *  - the second previous char
+                 * */
                 c[i] = (c[i+1] == tmp) || (c[i+1] == qMark || c[i-2] == tmp) ? alternativeChar(tmp) : tmp;
             }
         }
         System.out.println(c);
     }
+
 
     private static char alternativeChar(char tmp) {
         if(tmp == aMark)
