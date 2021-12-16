@@ -46,30 +46,19 @@ public class MaximumCostOfDeletion {
          *      if the length of str is 1
          * */
 
-
-        int pointerOne = 0;
-        int pointerTwo = 1;
-
         int tSum =0;
 
         for(int i =0; i<str.length(); i++){
 
             if(i == str.length() -1)continue;
 
-            if(str.charAt(pointerOne) != str.charAt(pointerTwo)) {
-                pointerOne++;
-                pointerTwo++;
-
+            if(str.charAt(i) != str.charAt(i+1)) {
                 continue;
             }
 
-            int smaller = getSmaller(c[pointerOne], c[pointerTwo]);
+            int smaller = getSmaller(c[i], c[i+1]);
 
             tSum = tSum + smaller;
-
-            pointerOne++;
-            pointerTwo++;
-
         }
         return tSum;
     }
