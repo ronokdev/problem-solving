@@ -3,7 +3,7 @@ package com.ronok.algoexpert;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GenerateDocument {
+public class GenerateDocument_Approach1 {
     public static void main(String[] args) {
         System.out.println(doGenerateDocument("abcabc", "aabbccc"));
         System.out.println(doGenerateDocument("Bste!hetsi ogEAxpelrt x ", "AlgoExpert is the Best!"));
@@ -20,7 +20,10 @@ public class GenerateDocument {
 
 
         /**
-         * Time  Complexity : O(n+m) : n is the number of characters, m is the length of the document
+         * Time  Complexity : O(n^2) : because in the second array we are doing a linear operation and the
+         * time complexity of indexOf is also O(n)
+         * so we are taking O(n^2) time
+         *
          * space Complexity : O(c)   : c is the number of characters
          * */
 
