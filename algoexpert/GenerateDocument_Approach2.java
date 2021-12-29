@@ -11,6 +11,6 @@ public class GenerateDocument_Approach2 {
         /***/
 
 
-        return false;
+        return true;
     }
 }
