@@ -15,7 +15,7 @@ public class GenerateDocument_Approach1 {
          * Put the document string in the list
          * loop through each char in the characters and
          * then remove the char from the list
-         * then return the hashmap is empty or not
+         * then return the if the list is empty or not
          * */
 
 
