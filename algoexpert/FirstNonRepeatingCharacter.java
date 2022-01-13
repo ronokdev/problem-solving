@@ -13,24 +13,23 @@ public class FirstNonRepeatingCharacter {
 
     private static int doFirstNonRepeatingCharacter(String str) {
 
-        /**
-         * Loop through the str
-         * insert the number of occurrence in the Linked hashmap
-         * we are using the Linked hashmap to, preserve the order of Insertion
-         * then again loop through the str
-         * find the occurrence of each char in str
-         * return the index of the char with the occurrence == 1
-         * */
+        /*
+          Loop through the str
+          insert the number of occurrence in the hashmap
+          then again loop through the str
+          find the occurrence of each char in str
+          return the index of the char with the occurrence == 1
+          */
 
 
         /*
-        * Time Complexity : O(n)
-        * space complexity : O(1) because, in the question it's said that the input only contains SMALL english letters
-        * as there is only 26 english small letters , thus we can say that our hashmap will not be bigger than 26
-        * thus we can say that space complexity is O(1)
-        * */
+         Time Complexity : O(n)
+         space complexity : O(1) because, in the question it's said that the input only contains SMALL english letters
+         as there is only 26 english small letters , thus we can say that our hashmap will not be bigger than 26
+         thus we can say that space complexity is O(1)
+         */
 
-        HashMap<Character,Integer> hashMap = new LinkedHashMap<>();
+        HashMap<Character,Integer> hashMap = new HashMap<>();
 
         for(int i=0; i<str.length();i++){
             if(hashMap.containsKey(str.charAt(i))){
