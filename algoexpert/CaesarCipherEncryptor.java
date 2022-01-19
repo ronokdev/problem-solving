@@ -17,6 +17,9 @@ public class CaesarCipherEncryptor {
         *   - we are using stringbuilder because it is a mutable class
         *   - the ascii value of a is 97
         *   - the ascii value of z is 122
+        *
+        *   - time complexity  : O(n)
+        *   - Space complexity : O(n)
         * */
 
         System.out.println(doCaesarCipherEncryptor("xyz",2)); // Expected output: zab
