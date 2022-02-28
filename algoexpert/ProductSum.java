@@ -40,6 +40,11 @@ public class ProductSum {
         *       - while doing recursion we are passing the Level and the SUM as a parameter
         * */
 
+        /*
+        * Time Complexity  : O(n) , where n is the Number of element in the Array
+        * Space Complexity : O(d) , where d is the number of depth of the Array
+        * */
+
 
         for(int i=0; i<listOfObject.toArray().length; i++){
 
