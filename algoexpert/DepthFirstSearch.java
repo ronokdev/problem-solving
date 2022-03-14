@@ -79,7 +79,18 @@ public class DepthFirstSearch {
         *   - adds node ` F ` to the finalArray and
         *   - calls the dfs function to the children of the node ` F ` (Node ` I J `)
         *   - and it Continues
-         *
+        *
+        *   - Time Complexity : O(v+e), where v(vertices) is the number of Nodes and, e(edge) is the number of Children of that nodes
+        *       - Explanation
+        *           - Time complexity is O(v+e) because
+        *               - we are traversing each and every node's and for each node we are calling the dfs function
+        *               - and the length of the for loop in the dfs function will be the number of children(e) of the node(v)
+        *               - that's why the time complexity is O(v+e)
+        *
+        *   - Space Complexity : O(v)
+        *       - Explanation
+        *           - we are storing the node name in an array and the length of the array will be the number of Nodes(v) also,
+        *           - when traversing we are adding `FRAME` and the maximum frame number will be the number of Nodes(v)
         * */
 
 
