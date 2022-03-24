@@ -47,6 +47,20 @@ public class FindClosestValueInBst {
         root.right.addNode(13,22);
         root.right.left.addNode(14);
 
+        /*
+         * Expected Binary Tree after all node add
+         *
+         *                        10
+         *                    /       \
+         *                   5         15
+         *                 /   \      /  \
+         *                2     5    13  22
+         *              /             \
+         *             1              14
+         * */
+
+
+
         System.out.println(findClosestValueInBst(root,12));
 
     }
@@ -59,30 +73,34 @@ public class FindClosestValueInBst {
 
         /*
         * STEPS
-        *   - Iterate via inOrder DFS (left, root, right)
+        *   - Iterate the tree with while loop
         *   - do subtraction on each node with the target and
         *   - keep track of the currentRemaining
-        *   - we will change the currentRemaining if and only if we get a currentRemaining which is smaller
+        *   - Change the currentRemaining if and only if we get a subResult which is smaller than currentRemaining
         * */
 
         BST current = tree;
 
         while(current != null){
 
-//            int res = Math.abs(Math.min(currentRemaining, Math.abs(target - current.value)));
-//            if(res < currentRemaining){
-//                currentTartgetValue = current.value;
-//            }
+            // subtracting each node with the target
+            int subResult = Math.abs(target - current.value);
+
+
+            // keeping track of the currentRemaining
+            if(subResult < currentRemaining){
+                currentRemaining = subResult ;
+                currentTartgetValue = current.value;
+            }
 
             if(target >= current.value){
-                System.out.println(current.value);
                 current = current.right;
             }
             else{
-                System.out.println(current.value);
                 current = current.left;
             }
         }
+
         return currentTartgetValue;
     }
 }
