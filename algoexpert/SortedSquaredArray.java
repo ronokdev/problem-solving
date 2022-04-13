@@ -20,6 +20,9 @@ public class SortedSquaredArray {
         *
         *   - Then we will check which one's square is Greater, and we will store the square of that value into our new array `resultArray`
         *   - and we will continue this until the first pointer is small or equal to the second pointer
+        *
+        * Time & Space Complexity
+        *   - O(n) where, n is the number of element in the array.
         * */
 
 
