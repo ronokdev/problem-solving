@@ -36,6 +36,11 @@ public class LeetCode_334 {
         return false;
     }
 
+    /*
+    * we need to keep track of the two smallest element in the array and if we find a third element that is bigger than both(two smallest elements) then
+    * we return True
+    * otherwise we return false
+    * */
     public static boolean increasingTriplet(int[] nums) {
         var first = Integer.MAX_VALUE;
         var second = Integer.MAX_VALUE;
